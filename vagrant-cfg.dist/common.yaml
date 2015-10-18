@@ -1,5 +1,5 @@
 ---
-
+# TODO --REMOVE ME-- bootstrap dist again to try in productive!
 ## common config variables
 path: /var/www/app_name
 vhost: app-name.dev
@@ -50,6 +50,10 @@ profile::app::zend_framework1: false
 profile::app::slim: false
 profile::app::php_vhost: false  # simple vhost that sends all *.php to php-fpm
 profile::app::standalone_app: false  # proxy to an app that comes with a webserver (rails, django, flask)
+# 1.2 TODO: REFACTOR WP_MOD_SIMPLE
+# Calling profile::app::wordpress_simple
+profile::app::wordpress: false # the minimal wordpress configuration
+
 
 profile::queue::rabbitmq: false
 
