@@ -43,7 +43,7 @@ profile::frontend::bower: false
 profile::frontend::coffee_script: false
 profile::frontend::grunt: false
 
-profile::app::symfony2: true
+profile::app::symfony2: false
 profile::app::yii1: false
 profile::app::yii2: false
 profile::app::zend_framework1: false
@@ -52,8 +52,16 @@ profile::app::php_vhost: false  # simple vhost that sends all *.php to php-fpm
 profile::app::standalone_app: false  # proxy to an app that comes with a webserver (rails, django, flask)
 # 1.2 TODO: REFACTOR WP_MOD_SIMPLE
 # Calling profile::app::wordpress_simple
-profile::app::wordpress: false # the minimal wordpress configuration
+profile::app::wordpress: true # the minimal wordpress configuration don't forget to create your DB!
+#component::wordpress::database:
+#  wordpress_db_name:
+#    user: wordpress_user
+#    password: wordpress_password
+#    host: localhost
+#    grant: ['ALL']
 
+component::wordpress::multisite: false
+component::wordpress::ssl: false
 
 profile::queue::rabbitmq: false
 
@@ -196,3 +204,4 @@ hhvm::config::port: 9090  # make sure that hhvm and php5-fpm ports don't collide
 ## only fpm php.ini settings
 # php::fpm::settings:
 #   PHP/short_open_tag: 'On'
+
