@@ -36,7 +36,7 @@ profile::interpreter::php: true
 profile::interpreter::hhvm: false
 
 profile::javascript::nodejs: false
-component::nodejs::version: stable
+component::nodejs::version: v0.8.22
 profile::javascript::less: false
 
 profile::frontend::compass: false
