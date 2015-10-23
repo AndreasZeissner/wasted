@@ -1,6 +1,8 @@
-class component::nodejs {
+class component::nodejs (
+  $version    => 'stable',
+){
   class { '::nodejs':
-    version      => 'stable',
+    version      => $version,
     make_install => false
   }
   contain '::nodejs'

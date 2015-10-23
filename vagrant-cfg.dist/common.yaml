@@ -36,6 +36,7 @@ profile::interpreter::php: true
 profile::interpreter::hhvm: false
 
 profile::javascript::nodejs: false
+component::nodejs::version: stable
 profile::javascript::less: false
 
 profile::frontend::compass: false
@@ -50,16 +51,9 @@ profile::app::zend_framework1: false
 profile::app::slim: false
 profile::app::php_vhost: false  # simple vhost that sends all *.php to php-fpm
 profile::app::standalone_app: false  # proxy to an app that comes with a webserver (rails, django, flask)
-# 1.2 TODO: REFACTOR WP_MOD_SIMPLE
+
 # Calling profile::app::wordpress_simple
 profile::app::wordpress: true # the minimal wordpress configuration don't forget to create your DB!
-#component::wordpress::database:
-#  wordpress_db_name:
-#    user: wordpress_user
-#    password: wordpress_password
-#    host: localhost
-#    grant: ['ALL']
-
 component::wordpress::multisite: false
 component::wordpress::ssl: false
 
